@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 
 # Lectura de la imagen
+# Para cambiar el motor al calendario:
+# img = cv2.imread('calendario.png')
 img = cv2.imread('motor.jpg')
 cv2.imshow('Original', img)
 cv2.waitKey(0)
@@ -42,7 +44,7 @@ if lines is not None:
         x0 = a*rho
 		# guardar el valor de r sen(theta)
         y0 = b*rho
-		# Ahora se recorrerá de -1500 a 1500 pixeles
+		# Ahora se recorrerá de -1500 a 1500 pixeles (para poder leer la imagen del calendario)
         x1 = int(x0 + 1500*(-b))
         y1 = int(y0 + 1500*(a))
         x2 = int(x0 - 1500*(-b))
